@@ -6,8 +6,10 @@ $category=$_POST['category'];
 $content=$_POST['content'];
 $amount=$_POST['amount'];
 
-$query = "INSERT INTO accountbook(Date, Category, Content, Amount) VALUES ('$date','$category','$content',$amount)";
+$query = "INSERT INTO accountbook(Date, Category, Content, Amount)
+          VALUES ('$date','$category','$content',$amount)";
 $add = $connect->query($query);
+
 if($add){
   header('Location: ./main.php');
 }

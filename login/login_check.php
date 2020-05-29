@@ -1,5 +1,4 @@
 <?php
-session_start();
 $id=$_POST['id'];
 $pw=$_POST['pw'];
 
@@ -15,13 +14,15 @@ if(mysqli_num_rows($result)==1){
 
   //PW가 일치하면 세션 생성
   if($row['PW']==$pw){
-    $_SESSION['userid']=$id;//로그인 성공시 세션변수 생성
-    if(isset($_SESSION['userid']))//세션변수가 참일 때
+    session_start();
+    $_SESSION['userid']=$id;
+    if(isset($_SESSION['userid']))//세션변수가 참일 때(userid 값이 존재!할때)
     {
-      header('Location: ./main.php');
+      header('Location: ../accountbook/main.php');
     }
     else{
       echo "session fail";
+      exit();
     }
   }
   else{

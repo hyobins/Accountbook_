@@ -3,8 +3,8 @@
       <!--첫 화면에 게시글 목록 모두 불러들여와 나열-->
       <?php
       $connect = mysqli_connect('localhost', 'root', '', 'accountbook');//DB연결
-
-      $query = "SELECT * FROM accountbook ORDER BY accountID";
+      //$id=$_POST['id'];
+      $query = "SELECT * FROM accountbook WHERE usersID = $id ORDER BY accountID";
       $accountbook = $connect->query($query);
 
       ?>
