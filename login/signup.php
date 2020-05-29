@@ -26,7 +26,9 @@ $signup = $connect->query($query);
 if($signup){
   //echo "Success";
   //echo "<a href = login.html> Do you want to Login?</a>";
-  header('Location: ./signupSuccess.php');
+  $msg = '환영합니다! '.$name.'님!';
+  echo "<script type=\"text/javascript\">alert('$msg'); history.go(-2);</script>";
 }
+//header('Location: ./login.html');
 //mysqli_close($connect);
 ?>
