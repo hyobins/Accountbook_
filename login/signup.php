@@ -8,9 +8,7 @@ $name=$_POST['name'];
 
 //Password Check
 if($pw!=$pwc){
-  // echo "Password is different!";
-  // echo "<a href=signup.html> Back to Signup Page</a>";
-  $msg = "비밀번호가 다릅니다.";
+  $msg = "Password is different!";
   echo "<script type=\"text/javascript\">alert('$msg'); history.go(-1);</script>";
   exit();
 }
@@ -19,8 +17,8 @@ if($pw!=$pwc){
 $check = "SELECT * FROM users WHERE ID='$id'";
 $result = $connect->query($check);
 if(mysqli_num_rows($result)==1){
-  echo "Duplicate ID";
-  echo "<a href = signup.html> Back to Signup Page</a>";
+  $msg = "Duplicate ID!";
+  echo "<script type=\"text/javascript\">alert('$msg'); history.go(-1);</script>";
   exit();
 }
 
