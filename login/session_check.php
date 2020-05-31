@@ -7,7 +7,7 @@ if(!isset($_SESSION['userid'])) //If there is no seesion
   header('Location: ./login.html');
 }
 else{
-  $login_status = TRUE;
+  //$login_status = TRUE;
 }
 
 //echo "Login Success";
