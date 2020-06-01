@@ -11,6 +11,7 @@
       <table class="table table-sm">
         <thead>
           <tr>
+            <th scope="col">ID</th> /*hidden 처리 해주기*/
             <th scope="col">Date</th>
             <th scope="col">Category</th>
             <th scope="col">Content</th>
