@@ -4,14 +4,14 @@
       <?php
       $connect = mysqli_connect('localhost', 'root', '', 'accountbook');//DB연결
       //$id=$_POST['id'];
-      $query = "SELECT * FROM accountbook WHERE usersID = $id ORDER BY accountID";
+      $query = "SELECT * FROM accountbook ORDER BY accountID";
       $accountbook = $connect->query($query);
 
       ?>
       <table class="table table-sm">
         <thead>
           <tr>
-            <th scope="col">ID</th> /*hidden 처리 해주기*/
+            <!-- <th scope="col">ID</th> /*hidden 처리 해주기*/ -->
             <th scope="col">Date</th>
             <th scope="col">Category</th>
             <th scope="col">Content</th>
